@@ -1,0 +1,33 @@
+body{
+    background: linear-gradient(100deg, #4e75c4, #b060c4);
+}
+.firstcontainer{
+    max-width: 600px !important;
+    background: linear-gradient(100deg,#4fc76d,#52e3de);
+}
+.seccontainer{
+    max-width: 600px !important;
+    background: linear-gradient(100deg, #df3f39, #e7cd24);
+}
+.container{
+    
+    background-color: #e3f2fd;
+}
+input[type=checkbox]:checked + label {
+    color:red;
+    text-decoration: line-through;
+}
+h3{
+    background-color: lemonchiffon;
+}
+
+.daybtn{
+    background: linear-gradient(100deg,#4fc76d,#52e3de);
+    color: black;
+    text-decoration: none;
+}
+.workbtn{
+    background: linear-gradient(100deg, #df3f39, #e7cd24);
+    color: black;
+    text-decoration: none;
+}

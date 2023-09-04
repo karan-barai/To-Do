@@ -1,0 +1,46 @@
+<%- include ("partials/header.ejs") %>
+<div class="container mt-5  p-3 border border-black rounded firstcontainer">
+ <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="to-do-list.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            To-Do List <h3 class="mt-2 p-3 rounded-pill border border-secondary-subtle d-sm-flex align-middle"><%= currDay %></h3>
+          </a>
+          
+        </div>
+</nav>
+
+<ul class="list-group border border-black">
+  <li class="list-group-item " >
+    <input class="form-check-input me-1 border border-primary" type="checkbox"value="" id="Checkbox" >
+    <label class="form-check-label" for="Checkbox">Drink water!</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1 border border-primary" type="checkbox" value="" id="Checkbox">
+    <label class="form-check-label" for="Checkbox">Buy fruits</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1 border border-primary" type="checkbox" value="" id="Checkbox">
+    <label class="form-check-label" for="Checkbox">Call mom</label>
+  </li>
+  <% for(i = 0; i <todo.length; i++){ %>
+    <li class="list-group-item">
+      <input class="form-check-input me-1 border border-primary" type="checkbox" value="" id="checkbox">
+      <label class="form-check-label" for="Checkbox"><%=todo[i] %></label>
+    </li>
+  <% } %>
+</ul>
+   
+  
+  
+  <form action="/" method="post">
+ <div class="input-group mb-3 pt-4 ">
+    <input type="text" class="form-control rounded border border-black " placeholder="Enter To-Do" aria-label="todo" aria-describedby="button-addon2" name="todo"autocomplete="off">
+    <button class="btn btn-outline-secondary btn-info rounded mx-2 border border-black" type="submit" id="button-addon2">Add</button>
+  </div>
+
+  </form> 
+  
+
+
+<%- include ("partials/footer.ejs") %>

@@ -1,0 +1,44 @@
+<%- include ("partials/header.ejs") %>
+<div class="work container mt-5 p-3 border border-black rounded seccontainer">
+<nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="icons-tasklist.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Work tasks
+      </a>
+    </div>
+</nav>
+
+<ul class="list-group border border-black">
+    <li class="list-group-item " >
+      <input class="form-check-input me-1 border border-primary" type="checkbox"value="" id="Checkbox" >
+      <label class="form-check-label" for="Checkbox">Test project</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1 border border-primary" type="checkbox" value="" id="Checkbox">
+      <label class="form-check-label" for="Checkbox">Create a repo</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1 border border-primary" type="checkbox" value="" id="Checkbox">
+      <label class="form-check-label" for="Checkbox">Start learning about APIs</label>
+    </li>
+    <% for(i = 0; i <wTodo.length; i++){ %>
+      <li class="list-group-item">
+        <input class="form-check-input me-1 border border-primary" type="checkbox" value="" id="icheckbox">
+        <label class="form-check-label" for="iCheckbox"><%=wTodo[i] %></label>
+      </li>
+    <% } %>
+  </ul>
+     
+    
+    
+    <form action="/work" method="post">
+    <div class="input-group mb-3 pt-4 ">
+      <input type="text" class="form-control rounded border border-black " placeholder="Enter work's To-Do" aria-label="workTodo" aria-describedby="button-addon2" name="workTodo"autocomplete="off">
+      <button class="btn btn-outline-secondary btn-info rounded mx-2 border border-black" type="submit" id="button-addon2">Add</button>
+    </div>
+  
+    </form> 
+
+    
+<%- include ("partials/footer.ejs") %>
